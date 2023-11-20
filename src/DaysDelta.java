@@ -33,7 +33,7 @@ public class DaysDelta {
 class DaysDeltaTest {
 
     @Test
-    void testDaysOlder() {
+    void testDaysOlder() throws Exception {
         Person person1 = new Person("Bill McKnight", "Male", LocalDate.of(1980, 1, 1));
         Person person2 = new Person("Paul Robinson", "Male", LocalDate.of(1985, 5, 15));
         List<Person> persons = Arrays.asList(person1, person2);

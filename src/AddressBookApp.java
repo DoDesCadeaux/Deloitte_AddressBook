@@ -1,6 +1,10 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.time.format.DateTimeFormatter;
 import java.time.format.ResolverStyle;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Locale;
 
 class Person {
@@ -50,9 +54,18 @@ class Person {
 
 public class AddressBookApp {
     public static void main(String[] args) {
-        Person dorian = new Person("Dorian", "Male", "23/07/98");
-        System.out.println(dorian.get_birthday());
-        System.out.println(dorian.get_gender());
-        System.out.println(dorian.get_name());
+        try {
+            String AddressBookPath = System.getProperty("user.dir") +
+                    File.separator + "src" + File.separator + "AddressBook.txt";
+
+            List<String> lines = FileReader.readFile(AddressBookPath);
+
+            for (String line : lines) {
+                System.out.println(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

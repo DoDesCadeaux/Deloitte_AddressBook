@@ -38,6 +38,7 @@ class Person {
         this._birthday = birthday.minusYears(100);
     }
 
+    // Here I override the toString() method for Person class, which will print the Person attributes like I want
     @Override
     public String toString() {
         return "Name : " + _name + ", Gender : " + _gender + ", Birthday : " + _birthday;

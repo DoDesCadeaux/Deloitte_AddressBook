@@ -17,8 +17,8 @@ public class AddressBookApp {
             DisplayPerson.Display(persons);
 
             // We count specified Genders, could be Female as well, but specified Male for the assessment
-            int gendersCount = GenderCounter.GenderCount(persons, "Male");
-            System.out.println("Genders : " +  gendersCount);
+            int gendersCount = GenderCounter.GenderCount(persons, "Female");
+            System.out.println("Number of Males : " +  gendersCount);
 
             // Find the oldest person by comparing the biggest number of days since their respective birthdays to today
             // And returning the corresponding biggest number with the right person.
@@ -26,7 +26,7 @@ public class AddressBookApp {
             System.out.println("Oldest Person : " + oldestPerson);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.print("Error : " + e);
         }
     }
 }

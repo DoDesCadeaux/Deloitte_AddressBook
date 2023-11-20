@@ -19,6 +19,7 @@ class Person {
         this._birthday = _birthday;
     }
 
+    //Getters (returns privates attributes)
     public String get_name() {
         return _name;
     }

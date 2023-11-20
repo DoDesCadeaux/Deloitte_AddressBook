@@ -38,11 +38,11 @@ class Person {
     public Person(String name, String gender, LocalDate birthday) {
         this._name = name;
         this._gender = gender;
-        this._birthday = birthday;
+        this._birthday = birthday.minusYears(100);
     }
 
     @Override
     public String toString() {
-        return "Name : " + _name + ", Gender : " + _gender + ", Birthday : " + _birthday.minusYears(100);
+        return "Name : " + _name + ", Gender : " + _gender + ", Birthday : " + _birthday;
     }
 }

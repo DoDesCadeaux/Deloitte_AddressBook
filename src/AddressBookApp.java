@@ -14,7 +14,9 @@ public class AddressBookApp {
 
             DisplayPerson.Display(persons);
 
+            int gendersCount = GenderCounter.GenderCount(persons, "Male");
 
+            System.out.println("Genders : " +  gendersCount);
 
         } catch (IOException e) {
             e.printStackTrace();

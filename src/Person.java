@@ -6,20 +6,7 @@ class Person {
     private String _gender;
     private LocalDate _birthday;
 
-    //Setters (Sets attributes from accessors for encapsulation purpose)
-    public void set_name(String name) {
-        this._name = name;
-    }
-
-    public void set_gender(String gender) {
-        this._gender = gender;
-    }
-
-    public void set_birthday(int year, int month, int day) {
-        this._birthday = LocalDate.of(year, month, day);
-    }
-
-    //Getters (returns privates attributes)
+    //Getters (returns privates attributes because we can't access from outside them if they are private)
     public String get_name() {
         return _name;
     }
@@ -38,7 +25,7 @@ class Person {
         this._birthday = birthday.minusYears(100);
     }
 
-    // Here I override the toString() method for Person class, which will print the Person attributes like I want
+    // Here I override the toString() method for Person class, which will print the Person attributes
     @Override
     public String toString() {
         return "Name : " + _name + ", Gender : " + _gender + ", Birthday : " + _birthday;

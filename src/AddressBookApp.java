@@ -13,8 +13,6 @@ public class AddressBookApp {
 
             // List of people within AddressBook, constructed with all correct Data
             List<Person> persons = PersonProcessor.processLines(lines);
-            // Here we display all persons from AddressBook.txt
-            DisplayPerson.Display(persons);
 
             // We count specified Genders, could be Female as well, but specified Male for the assessment
             int gendersCount = GenderCounter.GenderCount(persons, "Male");
@@ -25,8 +23,13 @@ public class AddressBookApp {
             String oldestPerson = OldestPerson.oldest(persons);
             System.out.println("Oldest Person : " + oldestPerson);
 
+            long olderDays = DaysDelta.daysOlder(persons, "Bill McKnight", "Paul Robinson");
+            System.out.println("Bill is " + olderDays + " days older than Paul");
+
         } catch (IOException e) {
-            System.out.print("Error : " + e);
+            System.out.println("Error : " + e);
+        } catch (Exception e) {
+            System.out.println("Error :" + e);
         }
     }
 }
